@@ -99,7 +99,7 @@ MonoBehaviour:
   distance: 7
   height: 3
   centerOffset: {x: 1, y: 6, z: 0}
-  followOnStart: 1
+  followOnStart: 0
   smoothSpeed: 0.125
 --- !u!1 &2569930448379719870
 GameObject:
@@ -116,6 +116,8 @@ GameObject:
   - component: {fileID: 1953271602523280795}
   - component: {fileID: 1985060320846629967}
   - component: {fileID: 8197407085782050622}
+  - component: {fileID: 6728934787198025168}
+  - component: {fileID: -8987974317280601446}
   m_Layer: 0
   m_Name: Personage
   m_TagString: Untagged
@@ -251,9 +253,42 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1985060320846629967}
+  - {fileID: -8987974317280601446}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!54 &6728934787198025168
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569930448379719870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &-8987974317280601446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569930448379719870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &7671035436057521187
 GameObject:
   m_ObjectHideFlags: 0

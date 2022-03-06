@@ -15,8 +15,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -60,6 +58,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -74,6 +76,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1658}
     - Class: 114
       Script: {instanceID: 2946}
+    - Class: 114
+      Script: {instanceID: 4036}
     - Class: 114
       Script: {instanceID: 4434}
     - Class: 114
@@ -1540,4 +1544,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/launcherScene.unity
   - Assets/Scenes/Map0.unity
-  playerPath: C:/Users/timot/Desktop/JeuxV1/Projet_S2_Sky_Lights.exe
+  playerPath: C:/Users/timot/Desktop/Test_Unity/Projet_S2_Sky_Lights.exe

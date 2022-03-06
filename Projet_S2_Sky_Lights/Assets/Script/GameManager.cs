@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
-
+using Photon.Pun.Demo.PunBasics;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     
@@ -12,9 +12,26 @@ public class GameManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        
+        
+        /*CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
+
+
+        if (_cameraWork != null)
+        {
+            if (photonView.IsMine)
+            {
+                _cameraWork.OnStartFollowing();
+            }
+        }
+        else
+        {
+            Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork de playerPrefab inexistant.", this);
+        }
+        */
         // verifier que le jouer est connecter
 
-        PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(40, 45, 10), Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(180, 300, 140), Quaternion.identity, 0);
 
     }
 
