@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8079196326127860478}
   - component: {fileID: 8495341409521792306}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: CameraWork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2392391958474860526}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2392391958474860526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69a229b739c3db2488e758c7ffb737f9, type: 3}
   m_Name: 
@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 8197407085782050622}
   - component: {fileID: 6728934787198025168}
   - component: {fileID: -8987974317280601446}
+  - component: {fileID: -2824254870306412101}
   m_Layer: 0
   m_Name: Personage
   m_TagString: Untagged
@@ -289,6 +290,20 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &-2824254870306412101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569930448379719870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e615bbf3237c804585f295ebce8a277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  rotateSpeed: 1800
 --- !u!1 &7671035436057521187
 GameObject:
   m_ObjectHideFlags: 0

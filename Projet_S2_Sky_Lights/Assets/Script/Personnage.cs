@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Pun.Demo.PunBasics;
+
+
 //using Photon.Pun.Demo.PunBasics;
 
 public class Personnage : MonoBehaviourPunCallbacks
 {
-    
     
     public float moveSpeed = 100.0f;
     public float rotateSpeed = 1800.0f;
@@ -34,6 +36,21 @@ public class Personnage : MonoBehaviourPunCallbacks
     void Start()
     {
          Physics.gravity = new Vector3(0, -200.00F, 0);
+         CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
+
+
+         if (_cameraWork != null)
+         {
+             if (photonView.IsMine)
+             {
+                 _cameraWork.OnStartFollowing();
+             }
+         }
+         else
+         {
+             Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
+         }
+         
     }
 
    
