@@ -32,26 +32,7 @@ public class Personnage : MonoBehaviourPunCallbacks
     private GameObject b;
     public GameObject boulet;
 
-    public Transform bouletorigine;
-    /*
-    void Start()
-    {
-        CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
-
-
-        if (_cameraWork != null)
-        {
-            if (photonView.IsMine)
-            {
-                _cameraWork.OnStartFollowing();
-            }
-        }
-        else
-        {
-            Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork de playerPrefab inexistant.", this);
-        }
-    }
-    */
+    public Transform bouletorigine; 
 
     void Start()
     {

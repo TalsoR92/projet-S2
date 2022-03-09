@@ -48,13 +48,13 @@ public class Launcher : MonoBehaviourPunCallbacks
     
     void LogFeedback(string message)
     {
-        // we do not assume there is a feedbackText defined.
+        
         if (feedbackText == null)
         {
             return;
         }
 
-        // add new messages as a new line and at the bottom of the log.
+        
         feedbackText.text += System.Environment.NewLine + message;
     }
     
@@ -79,7 +79,6 @@ public class Launcher : MonoBehaviourPunCallbacks
         Debug.Log(
             "PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
 
-        // #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
         PhotonNetwork.CreateRoom(null, new RoomOptions {MaxPlayers = this.maxPlayersPerRoom});
     }
     

@@ -15,13 +15,12 @@ public class GameManager : MonoBehaviourPunCallbacks
         
         
         
-        // verifier que le jouer est connecter
         
         PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(180, 300, 140), Quaternion.identity, 0);
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

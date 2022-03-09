@@ -282,28 +282,28 @@
  <HintPath>C:/Users/timot/Desktop/2020.3.27f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Users/timot/Desktop/2020.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -654,40 +654,40 @@
  <HintPath>C:/Users/timot/Desktop/2020.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/timot/Desktop/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/timot/Desktop/Nouveau dossier/projet-S2/Projet_S2_Sky_Lights/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -715,10 +715,6 @@
       <Project>{f2af9d25-3ce2-2035-5068-1e8c320624e7}</Project>
       <Name>PhotonVoice.API</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{61eed043-a7ff-9798-44fc-b2a01fa03e98}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
       <Project>{f488f915-8b59-ca2c-c92d-93c5bdad6ad9}</Project>
       <Name>PhotonVoice.PUN.Editor</Name>
@@ -735,10 +731,6 @@
       <Project>{fba46a07-f81f-2852-6fa5-b84528d8f81d}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{1349bed3-6df8-174e-1d17-6d6f8371881e}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{cb07f026-5cfc-4e03-e368-2e8364bd017e}</Project>
       <Name>PhotonRealtime</Name>
@@ -746,10 +738,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
       <Project>{6aebc87d-e5f4-46bb-e5c0-8c3ad64718ae}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{113888a3-02b3-741a-2f2e-0504b57123fc}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.csproj">
       <Project>{d257e786-c72f-b5eb-dddc-3f4ba2a81c00}</Project>
