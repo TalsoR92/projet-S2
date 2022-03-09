@@ -101,8 +101,9 @@ public class Personnage : MonoBehaviourPunCallbacks
     {
         //Debug.LogError("tire cannon2");
         RaycastHit hit;
+        //int layer_mask = LayerMask.GetMask("cannon");
         Ray ray2 = new Ray(transform.position, Vector3.forward);
-        if (Physics.Raycast(ray2,out hit,200))
+        if (Physics.Raycast(ray2,out hit,75/*,layer_mask*/))
         {
             b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
             b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
@@ -120,7 +121,7 @@ public class Personnage : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             Debug.DrawRay(transform.position,Vector3.down*50, Color.green);
-            Debug.DrawRay(transform.position,Vector3.forward*200, Color.red);
+            Debug.DrawRay(transform.position,Vector3.forward*75, Color.red);
             ProcessInput();
         }
     }
