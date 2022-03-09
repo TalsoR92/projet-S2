@@ -281,6 +281,15 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Users/timot/Desktop/2020.3.27f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="log4netPlastic">
+ <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
  <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
@@ -292,15 +301,6 @@
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
- </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
- </Reference>
- <Reference Include="log4netPlastic">
- <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/timot/Desktop/Projet S2/Projet_S2_Sky_Lights/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -695,6 +695,10 @@
       <Project>{43b200a3-f30e-9862-41f3-dc502a79a6b3}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonVoice.csproj">
+      <Project>{de15e90a-9eef-d7a3-c1f2-5ded88f2b3b5}</Project>
+      <Name>PhotonVoice</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{ceea1f4d-c834-12da-5586-58161578c119}</Project>
       <Name>PhotonUnityNetworking</Name>
@@ -703,9 +707,25 @@
       <Project>{e5c64e24-80ec-e8d7-717b-bd410e9a3aca}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Editor.csproj">
+      <Project>{486c5f83-96d9-c8b0-5813-fdcdd9332561}</Project>
+      <Name>PhotonVoice.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.API.csproj">
+      <Project>{f2af9d25-3ce2-2035-5068-1e8c320624e7}</Project>
+      <Name>PhotonVoice.API</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
       <Project>{61eed043-a7ff-9798-44fc-b2a01fa03e98}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
+      <Project>{f488f915-8b59-ca2c-c92d-93c5bdad6ad9}</Project>
+      <Name>PhotonVoice.PUN.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
+      <Project>{669e4432-c0af-51e7-01d8-d0e6e0ab294f}</Project>
+      <Name>PhotonVoice.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{b855ab14-8241-5ca0-ac6e-49ffebe6aca9}</Project>
@@ -731,33 +751,13 @@
       <Project>{113888a3-02b3-741a-2f2e-0504b57123fc}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{0fcd207f-3479-96d2-a600-8e1447addcd8}</Project>
-      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.csproj">
       <Project>{d257e786-c72f-b5eb-dddc-3f4ba2a81c00}</Project>
       <Name>PhotonVoice.PUN</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonVoice.API.csproj">
-      <Project>{f2af9d25-3ce2-2035-5068-1e8c320624e7}</Project>
-      <Name>PhotonVoice.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
-      <Project>{669e4432-c0af-51e7-01d8-d0e6e0ab294f}</Project>
-      <Name>PhotonVoice.Utilities.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{de15e90a-9eef-d7a3-c1f2-5ded88f2b3b5}</Project>
-      <Name>PhotonVoice</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{486c5f83-96d9-c8b0-5813-fdcdd9332561}</Project>
-      <Name>PhotonVoice.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
-      <Project>{f488f915-8b59-ca2c-c92d-93c5bdad6ad9}</Project>
-      <Name>PhotonVoice.PUN.Editor</Name>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
+      <Project>{0fcd207f-3479-96d2-a600-8e1447addcd8}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
