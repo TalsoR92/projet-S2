@@ -25,41 +25,44 @@ public class Personnage : MonoBehaviourPunCallbacks
     public string action;
 
     private Vector3 direction = new Vector3(0,0,0);
-    
-    
-    
-    
+
+    public AudioClip sonMarcher;
+    public AudioClip sonCourir;
+    public AudioClip sonSauter;
+
+
+
     private GameObject b;
     public GameObject boulet;
 
-    public Transform bouletorigine; 
+    public Transform bouletorigine;
 
     void Start()
     {
-         Physics.gravity = new Vector3(0, -200.00F, 0);
+        Physics.gravity = new Vector3(0, -200.00F, 0);
 
-         _collider = gameObject.GetComponent<CapsuleCollider>();
-         
-         
-         
-         
-         CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
+        _collider = gameObject.GetComponent<CapsuleCollider>();
 
 
-         if (_cameraWork != null)
-         {
-             if (photonView.IsMine)
-             {
-                 _cameraWork.OnStartFollowing();
-             }
-         }
-         else
-         {
-             Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
-         }
-         
+
+
+        CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
+
+
+        if (_cameraWork != null)
+        {
+            if (photonView.IsMine)
+            {
+                _cameraWork.OnStartFollowing();
+            }
+        }
+        else
+        {
+            Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
+        }
+
+
     }
-
     bool conctact()
     {
         //return Physics.CheckCapsule(_collider.bounds.center, new Vector3(_collider.bounds.center.x, _collider.bounds.min.y - 0.1f, _collider.bounds.center.z),0.59f);
@@ -105,9 +108,10 @@ public class Personnage : MonoBehaviourPunCallbacks
             Debug.DrawRay(transform.position,Vector3.forward*75, Color.red);
             ProcessInput();
         }
+        
     }
-    
-    
+
+
 
     public void ProcessInput()
     {
@@ -115,18 +119,22 @@ public class Personnage : MonoBehaviourPunCallbacks
         if (Input.GetKey(avancer))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * 2);
+            //GetComponent<AudioSource>().PlayOneShot(sonMarcher);
         }
         if (Input.GetKey(reculer))
         {
             transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+            //GetComponent<AudioSource>().Play(sonMarcher);
         } 
         if (Input.GetKey(droite))
         {
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+            //GetComponent<AudioSource>().Play(sonMarcher);
         }
         if (Input.GetKey(gauche))
         {
             transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+            //GetComponent<AudioSource>().Play(sonMarcher);
         }
         if (Input.GetKeyDown(sauter) && conctact() )
         {
@@ -134,10 +142,25 @@ public class Personnage : MonoBehaviourPunCallbacks
             v.y = vecsauter.y;
 
             gameObject.GetComponent<Rigidbody>().velocity = vecsauter;
-            
-            
+            GetComponent<AudioSource>().PlayOneShot(sonSauter);
+
+
             //transform.Translate(0,1.2f,0);
         }
+
+        if (Input.GetKeyDown(avancer) || Input.GetKey.Down(reculer) || Input.GetKey.Down(droite) || Input.GetKey.Down(gauche))
+        {
+             GetComponent<AudioSource>().PlayOnShot(sonMarcher);
+        }
+        else
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+    
+
+        
+
+
         if (Input.GetKeyDown(KeyCode.A) && conctactcannon() )
         {
             
@@ -148,6 +171,10 @@ public class Personnage : MonoBehaviourPunCallbacks
         }
         // Rotation avec souris
         direction = new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * rotateSpeed;
-        transform.Rotate(direction); 
+        transform.Rotate(direction);
+
+        
+    
     }
+
 }
