@@ -55,6 +55,7 @@ namespace Photon.Pun.Demo.PunBasics
 
         #region MonoBehaviour Callbacks
 
+        public AudioClip musiqueAmbiance;
 
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase
@@ -66,6 +67,7 @@ namespace Photon.Pun.Demo.PunBasics
             {
                 OnStartFollowing();
             }
+            GetComponent<AudioSource>().PlayOneShot(musiqueAmbiance);
         }
 
 

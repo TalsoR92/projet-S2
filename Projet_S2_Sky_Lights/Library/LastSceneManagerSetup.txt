@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/launcherScene.unity
+- path: Assets/Scenes/interface room.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

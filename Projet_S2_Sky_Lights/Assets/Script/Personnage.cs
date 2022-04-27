@@ -148,14 +148,14 @@ public class Personnage : MonoBehaviourPunCallbacks
             //transform.Translate(0,1.2f,0);
         }
 
-        if (Input.GetKeyDown(avancer) || Input.GetKey.Down(reculer) || Input.GetKey.Down(droite) || Input.GetKey.Down(gauche))
-        {
-             GetComponent<AudioSource>().PlayOnShot(sonMarcher);
-        }
-        else
-        {
-            GetComponent<AudioSource>().Stop();
-        }
+        // if (Input.GetKeyDown(avancer) || Input.GetKeyDown(reculer) || Input.GetKeyDown(droite) || Input.GetKeyDown(gauche))
+        // {
+        //      GetComponent<AudioSource>().PlayOneShot(sonMarcher);
+        // }
+        // else
+        // {
+        //     GetComponent<AudioSource>().Stop();
+        // }
     
 
         
