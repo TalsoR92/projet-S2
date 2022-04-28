@@ -34,11 +34,18 @@ public class Personnage : MonoBehaviourPunCallbacks
 
     private GameObject b;
     public GameObject boulet;
+    public GameObject boulet2;
 
     public Transform bouletorigine;
+    
+    
+    public Rigidbody rigidbodyPerso;
+    //public Animation animations;
 
     void Start()
     {
+        
+        rigidbodyPerso = GetComponent<Rigidbody>(); 
         Physics.gravity = new Vector3(0, -200.00F, 0);
 
         _collider = gameObject.GetComponent<CapsuleCollider>();
@@ -70,7 +77,7 @@ public class Personnage : MonoBehaviourPunCallbacks
         
         //Debug.LogError(Physics.Raycast(transform.position, transform.up, out hit, -1000), this);
         //return Physics.Raycast(transform.position, transform.up, out hit, -1000);
-        Ray ray = new Ray(transform.position, Vector3.down);
+        Ray ray = new Ray(transform.position + Vector3.up *5, Vector3.down);
         if (Physics.Raycast(ray,50))
         {
             return true;
@@ -86,12 +93,36 @@ public class Personnage : MonoBehaviourPunCallbacks
         //Debug.LogError("tire cannon2");
         RaycastHit hit;
         //int layer_mask = LayerMask.GetMask("cannon");
-        Ray ray2 = new Ray(transform.position, Vector3.forward);
+        //Ray ray2 = new Ray(transform.position + Vector3.up * 55, Vector3.forward);
+        Ray ray2 = new Ray(transform.position + Vector3.up * 45, transform.TransformDirection(Vector3.forward));
         if (Physics.Raycast(ray2,out hit,75/*,layer_mask*/))
         {
-            b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
-            b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+            if (hit.transform.name == "cannon2")
+            {
+                b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
+                b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+                Debug.LogError("depuit cannon2");
+            }
+            else if (hit.transform.name == "cannon3")
+            {
+                b = PhotonNetwork.Instantiate(this.boulet2.name,  new Vector3(267, 195, -4416), Quaternion.identity, 1);
+                b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+                Debug.LogError("depuit cannon3");
+            }
+            //else
+            //{
+                //b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
+                //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+                //Debug.LogError("par defaut");
+            //}
+            Debug.LogError(hit.transform.name);
+            //b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
+            //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
             return true;
+        }
+        else
+        {
+            Debug.LogError(hit.transform.name);
         }
 
         return false;
@@ -104,8 +135,9 @@ public class Personnage : MonoBehaviourPunCallbacks
         
         if (photonView.IsMine)
         {
-            Debug.DrawRay(transform.position,Vector3.down*50, Color.green);
-            Debug.DrawRay(transform.position,Vector3.forward*75, Color.red);
+            Debug.DrawRay(transform.position + Vector3.up *5,Vector3.down*50, Color.green);
+            //Debug.DrawRay(transform.position + Vector3.up *55,Vector3.forward*75, Color.red);
+            Debug.DrawRay(transform.position + Vector3.up *45,transform.TransformDirection(Vector3.forward)*75, Color.red);
             ProcessInput();
         }
         
@@ -118,21 +150,41 @@ public class Personnage : MonoBehaviourPunCallbacks
         // Déplacement personage
         if (Input.GetKey(avancer))
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * 2);
+            //var vDeplacement = Input.GetAxis("Vertical") * moveSpeed *20;
+            //animations.Play("avancer");
+            var vDeplacement = Input.GetAxis("Vertical") * moveSpeed *2;
+            
+            rigidbodyPerso.velocity = (transform.forward * vDeplacement) + new Vector3(0, rigidbodyPerso.velocity.y, 0);
+            //rigidbodyPerso.AddRelativeForce(0, 0, vDeplacement ); 
+            
+            //transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * 2);
+            
             //GetComponent<AudioSource>().PlayOneShot(sonMarcher);
         }
         if (Input.GetKey(reculer))
         {
-            transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+            var vDeplacement = Input.GetAxis("Vertical") * moveSpeed ;
+            //rigidbodyPerso.AddRelativeForce(0, 0, -vDeplacement ); 
+            rigidbodyPerso.velocity = (transform.forward * vDeplacement) + new Vector3(0,(-1)*rigidbodyPerso.velocity.y, 0);
+            
+            //transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
             //GetComponent<AudioSource>().Play(sonMarcher);
         } 
         if (Input.GetKey(droite))
         {
+            //var vDeplacement = Input.GetAxis("Horizontal") * moveSpeed;
+            //rigidbodyPerso.AddRelativeForce(vDeplacement, 0, 0 ); 
+            //rigidbodyPerso.velocity = (transform.forward * vDeplacement) + new Vector3(rigidbodyPerso.velocity.x, 0, 0);
+            
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
             //GetComponent<AudioSource>().Play(sonMarcher);
         }
         if (Input.GetKey(gauche))
         {
+            //var vDeplacement = Input.GetAxis("Horizontal") * moveSpeed;
+            //rigidbodyPerso.AddRelativeForce(-vDeplacement, 0, 0 ); 
+            //rigidbodyPerso.velocity = (transform.forward * vDeplacement) + new Vector3( (-1)*rigidbodyPerso.velocity.x, 0, 0);
+            
             transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
             //GetComponent<AudioSource>().Play(sonMarcher);
         }
@@ -161,13 +213,16 @@ public class Personnage : MonoBehaviourPunCallbacks
         
 
 
-        if (Input.GetKeyDown(KeyCode.A) && conctactcannon() )
+        if (Input.GetKeyDown(KeyCode.A) )
         {
-            
-            
-            
-            
-            Debug.LogError("tire cannon");
+            if (conctactcannon())
+            {
+                Debug.LogError("tire cannon");
+            }
+            else
+            {
+                Debug.LogError("ne tire pas");
+            }
         }
         // Rotation avec souris
         direction = new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * rotateSpeed;
