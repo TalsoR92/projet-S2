@@ -315,8 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 20
-  height: 5
-  centerOffset: {x: 0, y: 3, z: 0}
+  height: 20
+  centerOffset: {x: 0, y: 50, z: 0}
   followOnStart: 0
   smoothSpeed: 15
   musiqueAmbiance: {fileID: 0}

@@ -27,6 +27,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -110,17 +112,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3672}
     - Class: 114
-      Script: {instanceID: 3882}
+      Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 4394}
+      Script: {instanceID: 4396}
     - Class: 114
-      Script: {instanceID: 4832}
+      Script: {instanceID: 4834}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 5324}
+      Script: {instanceID: 5326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -227,41 +229,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3300}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3672}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3770}
     - Class: 114
-      Script: {instanceID: 3790}
+      Script: {instanceID: 3792}
     - Class: 114
-      Script: {instanceID: 3882}
+      Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4150}
+      Script: {instanceID: 4152}
     - Class: 114
-      Script: {instanceID: 4154}
+      Script: {instanceID: 4156}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 4344}
     - Class: 114
-      Script: {instanceID: 4394}
+      Script: {instanceID: 4396}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 4554}
     - Class: 114
-      Script: {instanceID: 4800}
+      Script: {instanceID: 4802}
     - Class: 114
-      Script: {instanceID: 4832}
+      Script: {instanceID: 4834}
     - Class: 114
-      Script: {instanceID: 4840}
+      Script: {instanceID: 4842}
     - Class: 114
-      Script: {instanceID: 4988}
+      Script: {instanceID: 4990}
     - Class: 114
-      Script: {instanceID: 4994}
+      Script: {instanceID: 4996}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 5336}
+      Script: {instanceID: 5338}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -689,7 +691,7 @@ ScriptsOnlyBuild:
     className: SplineWalker
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f709e07df57fa982ddb0a0cf91aeb1b3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManagement
@@ -1035,6 +1037,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomNameProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 8b21061e9d037d307e029130da878344
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenu
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -1793,7 +1801,7 @@ ScriptsOnlyBuild:
     className: PunTurnManager
   - hash:
       serializedVersion: 2
-      Hash: c74f31c2f09a3a266b5c39d708e22581
+      Hash: 57e07f7f22211fc467ffc00c12460bae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Personnage
@@ -1921,4 +1929,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/launcherScene.unity
   - Assets/Scenes/Map0.unity
-  playerPath: C:/Users/timot/Desktop/Jeux/Projet_S2_Sky_Lights.exe
+  playerPath: C:/Users/timot/Desktop/jeux/Projet_S2_Sky_Lights.exe
