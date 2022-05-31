@@ -9,14 +9,13 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
     
     public GameObject playerPrefab;
+    public GameObject spaunw;
     
     void Start()
     {
         
-        
-        
-        
-        PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(389, 132, -4582), Quaternion.identity, 0);
+        //PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(389, 132, -4582), Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(this.playerPrefab.name, spaunw.transform.position, Quaternion.identity, 0);
         
     }
 
