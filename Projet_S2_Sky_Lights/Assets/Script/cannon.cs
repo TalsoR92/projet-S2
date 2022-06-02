@@ -8,8 +8,10 @@ public class cannon : MonoBehaviourPunCallbacks
 
 
     public GameObject boulet;
+    public GameObject embouchure;
 
     public Transform bouletorigine;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,22 @@ public class cannon : MonoBehaviourPunCallbacks
     {
         
     }
+    
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "contact")
+        {
+            tire();
+        }
+        
+        if (collision.gameObject.name == "contacte")
+        {
+            tire();
+        }
+        print(collision.gameObject.name);
+    }
+    
+
 
     private GameObject b;
 
@@ -28,6 +46,8 @@ public class cannon : MonoBehaviourPunCallbacks
     {
         b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
         b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        Debug.LogError("tire efectuer");
+        
     }
     
     

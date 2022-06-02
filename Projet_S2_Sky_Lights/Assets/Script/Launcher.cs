@@ -22,7 +22,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     
     public void Connect()
     {
-        feedbackText.text = "";
+        //feedbackText.text = "";
 
         isConnecting = true;
 
@@ -31,13 +31,13 @@ public class Launcher : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsConnected)
         {
-            LogFeedback("Joining Room...");
+            //LogFeedback("Joining Room...");
             PhotonNetwork.JoinRandomRoom();
         }
         else
         {
 
-            LogFeedback("Connecting...");
+            //LogFeedback("Connecting...");
 
             PhotonNetwork.ConnectUsingSettings();
             PhotonNetwork.GameVersion = this.gameVersion;
@@ -53,9 +53,9 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             return;
         }
-
         
-        feedbackText.text += System.Environment.NewLine + message;
+        
+        //feedbackText.text += System.Environment.NewLine + message;
     }
     
     

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Batteaux : MonoBehaviourPunCallbacks
 {
-    public float vitesse = 1.0f;
+    public float vitesse = 60.0f;
     public float moveSpeed = 8000.0f;
     public Rigidbody rigidbodyBatteau;
     
@@ -21,18 +21,16 @@ public class Batteaux : MonoBehaviourPunCallbacks
     void Update()
     {
         avance();
-        
-        
     }
 
     public void avance()
     {
         
             
-        var vDeplacement = Input.GetAxis("Vertical") *  vitesse *moveSpeed *2;
+        //var vDeplacement = Input.GetAxis("Vertical") *  vitesse *moveSpeed *2;
             
-        rigidbodyBatteau.velocity = (transform.forward * vDeplacement) + new Vector3(0, rigidbodyBatteau.velocity.y, 0);
+        //rigidbodyBatteau.velocity = (transform.forward * vDeplacement) + new Vector3(0, rigidbodyBatteau.velocity.y, 0);
             
-        
+        transform.Translate(Vector3.left*Time.deltaTime * vitesse);
     }
 }

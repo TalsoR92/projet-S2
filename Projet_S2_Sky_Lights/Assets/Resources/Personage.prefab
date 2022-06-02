@@ -199,8 +199,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.717204, y: 18.824564, z: 3.9554148}
-  m_Center: {x: -0.05798204, y: 8.912283, z: 0.24208738}
+  m_Size: {x: 5.717204, y: 18.77893, z: 3.955415}
+  m_Center: {x: -0.05798204, y: 8.935145, z: 0.24208738}
 --- !u!114 &1985060320846629967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   angle: 0
   moveSpeed: 100
   rotateSpeed: 800
-  vecsauter: {x: 0, y: 200, z: 0}
+  vecsauter: {x: 0, y: 100, z: 0}
   avancer: up
   reculer: down
   droite: left
@@ -302,6 +302,9 @@ MonoBehaviour:
   boulet2: {fileID: 2017673016718244581, guid: cc8f7846482848943861142b80632465, type: 3}
   bouletorigine: {fileID: 862728240544728264, guid: 7582c731be1e14040ac8355bc614a54d, type: 3}
   rigidbodyPerso: {fileID: 6728934787198025168}
+  pere: {fileID: 1063944182874450907, guid: 25feafdd87b084e4cb52760ea65bb8d2, type: 3}
+  spaunw: {fileID: 0}
+  coli: {fileID: 8724534225905871240, guid: 51ecebd73ccd2f74ca329ad400bd9595, type: 3}
 --- !u!114 &-4721612817932431699
 MonoBehaviour:
   m_ObjectHideFlags: 0

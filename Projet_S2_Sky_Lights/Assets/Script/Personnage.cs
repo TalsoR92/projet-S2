@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
+using UnityEngine.SceneManagement;
+using Scene = UnityEditor.SearchService.Scene;
 
 
 //using Photon.Pun.Demo.PunBasics;
@@ -40,7 +42,13 @@ public class Personnage : MonoBehaviourPunCallbacks
     
     
     public Rigidbody rigidbodyPerso;
+    
+    public GameObject pere;
+    
+    public GameObject spaunw;
     //public Animation animations;
+    
+    public GameObject coli;
 
     void Start()
     {
@@ -67,7 +75,8 @@ public class Personnage : MonoBehaviourPunCallbacks
         {
             Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
         }
-
+        
+        //this.transform.parent = pere.transform;
 
     }
     bool conctact()
@@ -78,7 +87,7 @@ public class Personnage : MonoBehaviourPunCallbacks
         //Debug.LogError(Physics.Raycast(transform.position, transform.up, out hit, -1000), this);
         //return Physics.Raycast(transform.position, transform.up, out hit, -1000);
         Ray ray = new Ray(transform.position + Vector3.up *5, Vector3.down);
-        if (Physics.Raycast(ray,50))
+        if (Physics.Raycast(ray,22))
         {
             return true;
         }
@@ -95,35 +104,50 @@ public class Personnage : MonoBehaviourPunCallbacks
         //int layer_mask = LayerMask.GetMask("cannon");
         //Ray ray2 = new Ray(transform.position + Vector3.up * 55, Vector3.forward);
         Ray ray2 = new Ray(transform.position + Vector3.up * 45, transform.TransformDirection(Vector3.forward));
-        if (Physics.Raycast(ray2,out hit,75/*,layer_mask*/))
+        int layer_mask = LayerMask.GetMask("cannon");
+        
+        if(Physics.Raycast(ray2, out hit, 75, layer_mask, QueryTriggerInteraction.Ignore))
         {
-            if (hit.transform.name == "cannon2")
-            {
-                b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
-                b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
-                Debug.LogError("depuit cannon2");
-            }
-            else if (hit.transform.name == "cannon3")
-            {
-                b = PhotonNetwork.Instantiate(this.boulet2.name,  new Vector3(267, 195, -4416), Quaternion.identity, 1);
-                b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
-                Debug.LogError("depuit cannon3");
-            }
-            //else
-            //{
-                //b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
-                //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
-                //Debug.LogError("par defaut");
-            //}
-            Debug.LogError(hit.transform.name);
-            //b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
-            //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+            GameObject coli2 = PhotonNetwork.Instantiate(this.coli.name, hit.point, Quaternion.identity, 0);
+            //coli2.transform.parent = pere.transform;
+            print(hit.transform.name +" traverse le rayon.");
+            print("La distance est de " + hit.distance);
+            //coli2.transform.position = hit.point;
             return true;
         }
-        else
-        {
-            Debug.LogError(hit.transform.name);
-        }
+        
+        
+        
+        
+        // if (Physics.Raycast(ray2,out hit,75/*,layer_mask*/))
+        // {
+        //     if (hit.transform.name == "cannon2")
+        //     {
+        //         b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
+        //         b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        //         Debug.LogError("depuit cannon2");
+        //     }
+        //     else if (hit.transform.name == "cannon3")
+        //     {
+        //         b = PhotonNetwork.Instantiate(this.boulet2.name,  new Vector3(267, 195, -4416), Quaternion.identity, 1);
+        //         b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        //         Debug.LogError("depuit cannon3");
+        //     }
+        //     //else
+        //     //{
+        //         //b = PhotonNetwork.Instantiate(this.boulet.name,  new Vector3(267, 195, -4745), Quaternion.identity, 2);
+        //         //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        //         //Debug.LogError("par defaut");
+        //     //}
+        //     Debug.LogError(hit.transform.name);
+        //     //b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
+        //     //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        //     return true;
+        // }
+        // else
+        // {
+        //     Debug.LogError(hit.transform.name);
+        // }
 
         return false;
 
@@ -140,6 +164,11 @@ public class Personnage : MonoBehaviourPunCallbacks
             Debug.DrawRay(transform.position + Vector3.up *45,transform.TransformDirection(Vector3.forward)*75, Color.red);
             ProcessInput();
         }
+
+        //if (gameObject.transform.position.y < 300)
+        //{
+        //    this.gameObject.transform.position = spaunw.transform.position;
+        //}
         
     }
 
@@ -193,7 +222,7 @@ public class Personnage : MonoBehaviourPunCallbacks
             Vector3 v = gameObject.GetComponent<Rigidbody>().velocity;
             v.y = vecsauter.y;
 
-            gameObject.GetComponent<Rigidbody>().velocity = vecsauter;
+            gameObject.GetComponent<Rigidbody>().velocity = vecsauter ;
             GetComponent<AudioSource>().PlayOneShot(sonSauter);
 
 

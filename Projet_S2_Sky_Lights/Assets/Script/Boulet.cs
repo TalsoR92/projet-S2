@@ -14,7 +14,7 @@ public class Boulet : MonoBehaviour
     void Update()
     {
         
-        transform.Translate(Vector3.back *  170);
+        //transform.Translate(Vector3.back *  170);
         if (transform.position.y < 80)
         {
             

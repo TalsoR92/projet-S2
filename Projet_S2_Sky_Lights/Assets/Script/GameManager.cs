@@ -10,13 +10,16 @@ public class GameManager : MonoBehaviourPunCallbacks
     
     public GameObject playerPrefab;
     public GameObject spaunw;
-    
+    public GameObject pere;
+
+    private GameObject personage;
     void Start()
     {
         
         //PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(389, 132, -4582), Quaternion.identity, 0);
-        PhotonNetwork.Instantiate(this.playerPrefab.name, spaunw.transform.position, Quaternion.identity, 0);
-        
+        //PhotonNetwork.Instantiate(this.playerPrefab.name, spaunw.transform.position, Quaternion.identity, 0);
+        personage = PhotonNetwork.Instantiate(this.playerPrefab.name, spaunw.transform.position, Quaternion.identity, 0);
+        personage.transform.parent = pere.transform;
     }
 
     
@@ -25,6 +28,12 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             QuitApplication();
+        }
+        //Debug.LogError(transform.position.y);
+        if (personage.transform.position.y < 300)
+        {
+            Debug.LogError("teleportation");
+            this.personage.transform.position = spaunw.transform.position;
         }
     }
     
