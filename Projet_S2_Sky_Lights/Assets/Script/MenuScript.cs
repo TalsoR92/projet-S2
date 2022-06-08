@@ -13,7 +13,7 @@ public class MenuScript : MonoBehaviour
     bool waitingForKey;
     async void Start()
     {
-        menuPanel = transform.FindChild("Panel");
+        menuPanel = transform.Find("Panel");
         menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
 

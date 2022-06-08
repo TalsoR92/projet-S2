@@ -23,18 +23,30 @@ public class cannon : MonoBehaviourPunCallbacks
     {
         
     }
-    
+
+    public void ChangeState()
+    {
+        if (true == gameObject.activeInHierarchy)
+        {
+            tire();
+            gameObject.SetActive(false);
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "contact")
+
+        //Debug.LogError("contacte connon");
+        //tire();
+        if (collision.gameObject.tag == "Player")
         {
             tire();
         }
         
-        if (collision.gameObject.name == "contacte")
-        {
-            tire();
-        }
+        //if (collision.gameObject.name == "contacte")
+        //{
+        //    tire();
+        //}
         print(collision.gameObject.name);
     }
     
@@ -45,7 +57,8 @@ public class cannon : MonoBehaviourPunCallbacks
     void tire()
     {
         b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
-        b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
+        b.GetComponent<Rigidbody>().AddForce(gameObject.transform.right * 100000);
         Debug.LogError("tire efectuer");
         
     }

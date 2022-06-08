@@ -13,7 +13,6 @@ public class Boulet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         //transform.Translate(Vector3.back *  170);
         if (transform.position.y < 80)
         {
@@ -22,4 +21,14 @@ public class Boulet : MonoBehaviour
             Debug.LogError("detruie");
         }
     }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "batteaux")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
 }

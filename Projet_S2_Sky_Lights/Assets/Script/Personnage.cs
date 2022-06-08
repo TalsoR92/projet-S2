@@ -106,8 +106,17 @@ public class Personnage : MonoBehaviourPunCallbacks
         Ray ray2 = new Ray(transform.position + Vector3.up * 45, transform.TransformDirection(Vector3.forward));
         int layer_mask = LayerMask.GetMask("cannon");
         
+        
+        
+        
         if(Physics.Raycast(ray2, out hit, 75, layer_mask, QueryTriggerInteraction.Ignore))
         {
+            
+            if (hit.transform.name == "cannon2")
+            {
+                //hit.transform.SetActive(false);
+                Debug.LogError("depuit cannon2");
+            }
             GameObject coli2 = PhotonNetwork.Instantiate(this.coli.name, hit.point, Quaternion.identity, 0);
             //coli2.transform.parent = pere.transform;
             print(hit.transform.name +" traverse le rayon.");
