@@ -49,7 +49,7 @@ public class Personnage : MonoBehaviourPunCallbacks
     //public Animation animations;
     
     public GameObject coli;
-
+    
     void Start()
     {
         
@@ -79,6 +79,10 @@ public class Personnage : MonoBehaviourPunCallbacks
         //this.transform.parent = pere.transform;
 
     }
+    
+    
+    
+    
     bool conctact()
     {
         //return Physics.CheckCapsule(_collider.bounds.center, new Vector3(_collider.bounds.center.x, _collider.bounds.min.y - 0.1f, _collider.bounds.center.z),0.59f);
@@ -95,6 +99,7 @@ public class Personnage : MonoBehaviourPunCallbacks
         return false;
 
     }
+    
     
     
     bool conctactcannon()
