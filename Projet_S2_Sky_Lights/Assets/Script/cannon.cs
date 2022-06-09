@@ -66,7 +66,7 @@ public class cannon : MonoBehaviourPunCallbacks
 
     private GameObject b;
 
-    void tire()
+    public void tire()
     {
         b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
         //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);

@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
 using UnityEngine.SceneManagement;
-using Scene = UnityEditor.SearchService.Scene;
+//using Scene = UnityEditor.SearchService.Scene;
 
 
 //using Photon.Pun.Demo.PunBasics;

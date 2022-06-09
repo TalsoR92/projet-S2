@@ -365,7 +365,6 @@ MonoBehaviour:
   spaunw: {fileID: 1048506004}
   pere: {fileID: 1048506003}
   batteauxPrefab: {fileID: 7162849151472328421, guid: 25feafdd87b084e4cb52760ea65bb8d2, type: 3}
-  vie: {fileID: 973457416}
 --- !u!1 &758188599
 GameObject:
   m_ObjectHideFlags: 0
