@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public GameObject batteauxPrefab;
     private GameObject personage;
     private GameObject batteaux;
+    private PhotonView view;
     //public Text vie;
     void Start()
     {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         //personage.transform.parent = batteaux.transform;
         personage.transform.parent = pere.transform;
         //vie.text = "20 / 20";
+        view = GetComponent<PhotonView>();
     }
 
     
@@ -53,8 +55,24 @@ public class GameManager : MonoBehaviourPunCallbacks
             this.personage.transform.position = spaunw.transform.position;
             //this.personage.transform.position = batteaux.transform.position;
         }
+        if (Input.GetKey(KeyCode.D) )
+        {
+            pere.transform.Rotate(new Vector3(0,-2,0)* Time.deltaTime);
+            
+            //view.RPC("Ratation",RpcTarget.All,-2* Time.deltaTime);
+            view.RPC("start",RpcTarget.Others);
+        }
+        if (Input.GetKey(KeyCode.F) )
+        {
+            pere.transform.Rotate(new Vector3(0,2,0)* Time.deltaTime);
+            view.RPC("Ratation",RpcTarget.All,2* Time.deltaTime);
+            view.RPC("start",RpcTarget.Others);
+        }
     }
-    
+    void Ratation(int n)
+    {
+        pere.transform.Rotate(new Vector3(0,n,0)* Time.deltaTime);
+    }
 
     public void OnPlayerEnterRoom(Player other)
     {

@@ -44,6 +44,8 @@ MonoBehaviour:
   - HeresWhy
   - bateau_mise_emplace
   - start
+  - ratation
+  - Ratation
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

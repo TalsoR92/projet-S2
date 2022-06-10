@@ -26,22 +26,31 @@ public class Batteaux : MonoBehaviourPunCallbacks
     void Update()
     {
         avance();
+        //ratation(1);
     }
     
     [PunRPC]
     void start()
     {
         
-        view.RPC("bateau_mise_emplace",RpcTarget.Others,(this.transform.position));
+        view.RPC("bateau_mise_emplace",RpcTarget.Others,(this.transform.position,this.transform.rotation.y));
     }
     
 
     [PunRPC]
-    void bateau_mise_emplace(int x1,int y1,int z1)
+    void bateau_mise_emplace(Vector3 vector3,int angle)
     {
-        this.transform.position = new Vector3(x1, y1, z1);
+        this.transform.position = vector3;
+        this.transform.eulerAngles = new Vector3(0, angle, 0);
     }
 
+    //[PunRPC]
+    void Ratation(int n)
+    {
+        this.transform.Rotate(new Vector3(0,n,0)* Time.deltaTime);
+    }
+    
+    
     public void avance()
     {
         

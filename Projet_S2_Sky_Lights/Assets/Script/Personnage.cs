@@ -46,7 +46,7 @@ public class Personnage : MonoBehaviourPunCallbacks
     public GameObject pere;
     
     public GameObject spaunw;
-    //public Animation animations;
+    //public Animation 6;
     
     public GameObject coli;
     
@@ -252,9 +252,8 @@ public class Personnage : MonoBehaviourPunCallbacks
         //     GetComponent<AudioSource>().Stop();
         // }
     
-
         
-
+        
 
         if (Input.GetKeyDown(KeyCode.A) )
         {
