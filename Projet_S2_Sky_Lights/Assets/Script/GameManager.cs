@@ -16,7 +16,12 @@ public class GameManager : MonoBehaviourPunCallbacks
     private GameObject personage;
     private GameObject batteaux;
     private PhotonView view;
-
+    public float vitesse = 40.0f;
+    
+    
+    
+    
+    private Batteaux Script;
     
     //public Text vie;
     void Start()
@@ -38,16 +43,17 @@ public class GameManager : MonoBehaviourPunCallbacks
         //}
         
         //personage.transform.parent = batteaux.transform;
-        personage.transform.parent = pere.transform;
+        //personage.transform.parent = pere.transform;
         //vie.text = "20 / 20";
         view = GetComponent<PhotonView>();
-        
+        /*
         view.RPC("startpersonage",RpcTarget.OthersBuffered,personage);
         foreach (Player p in PhotonNetwork.PlayerList)
         {
             Debug.LogError(p.UserId);
         }
-        
+        */
+        Script = pere.GetComponent<Batteaux>();
     }
 
     [PunRPC]
@@ -59,6 +65,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
     void Update()
     {
+        avance();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             QuitApplication();
@@ -86,6 +93,16 @@ public class GameManager : MonoBehaviourPunCallbacks
             view.RPC("bateau_mise_emplace2",RpcTarget.Others,(pere.transform.position,pere.transform.rotation.y));
         }
     }
+    
+    public void avance()
+    {
+        Script.avance(personage);
+        //Script.
+        //transform.Translate(Vector3.left*Time.deltaTime * vitesse);
+        //pere.transform.Translate(pere.transform * (-1)  * vitesse / 50);
+        //personage.transform.Translate(pere.transform.rotation.eulerAngles * (-1)  * vitesse / 20);
+    }
+    
     
     
     [PunRPC]

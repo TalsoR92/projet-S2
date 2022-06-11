@@ -18,6 +18,8 @@ public class Batteaux : MonoBehaviourPunCallbacks
     
     public bool D = false;
     public float timeRemaining = 5;
+
+    private Vector3 sauvegarde;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Batteaux : MonoBehaviourPunCallbacks
         view.RPC("start",RpcTarget.Others);
         view.RPC("start2",RpcTarget.Others);
         vie.text = vieint + " / 20";
+        sauvegarde = transform.position;
     }
 
     // Update is called once per frame
@@ -32,7 +35,7 @@ public class Batteaux : MonoBehaviourPunCallbacks
     {
         if (!D)
         {
-            avance();
+            //avance();
             if (vieint <= 0)
             {
                 view.RPC("Defaite",RpcTarget.All);
@@ -109,15 +112,19 @@ public class Batteaux : MonoBehaviourPunCallbacks
     }
     
     
-    public void avance()
+    public void avance(GameObject personage)
     {
         
             
         //var vDeplacement = Input.GetAxis("Vertical") *  vitesse *moveSpeed *2;
             
         //rigidbodyBatteau.velocity = (transform.forward * vDeplacement) + new Vector3(0, rigidbodyBatteau.velocity.y, 0);
-            
+        //Vector3 vect = transform.position;
+        
         transform.Translate(Vector3.left*Time.deltaTime * vitesse);
+        personage.transform.position = personage.transform.position + transform.position - sauvegarde;
+        //personage.transform.Translate(Vector3.left*Time.deltaTime * vitesse  *10);
+        sauvegarde = transform.position;
     }
 
     void OnCollisionEnter(Collision collision)

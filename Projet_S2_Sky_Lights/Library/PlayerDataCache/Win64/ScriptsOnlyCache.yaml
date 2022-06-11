@@ -20,6 +20,7 @@ ScriptsOnlyBuild:
     - PointersController
     - ProximityVoiceTrigger
     - SettingsMenu
+    - avance
     - cannon
     - cannon2
     - roue
@@ -33,8 +34,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -154,6 +153,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5114}
     - Class: 114
       Script: {instanceID: 5336}
+    - Class: 114
+      Script: {instanceID: 34162}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2073,7 +2074,7 @@ ScriptsOnlyBuild:
     className: ProceduralController
   - hash:
       serializedVersion: 2
-      Hash: b37f73fdc33bb336e0778e739aaece63
+      Hash: c5b335991a3b5fe2ba1829cf1ece6c52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -2089,6 +2090,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 618326e55a4234f83460b6802d77e6bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: avance
   platform: 19
   scenePathNames:
   - Assets/Scenes/menu test V1.unity
