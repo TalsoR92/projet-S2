@@ -50,6 +50,7 @@ public class Personnage : MonoBehaviourPunCallbacks
     
     public GameObject coli;
     
+    
     void Start()
     {
         
@@ -185,7 +186,9 @@ public class Personnage : MonoBehaviourPunCallbacks
         //}
         
     }
-
+    
+    
+        
 
 
     public void ProcessInput()

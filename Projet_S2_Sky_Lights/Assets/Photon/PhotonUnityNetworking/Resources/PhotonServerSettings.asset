@@ -46,6 +46,19 @@ MonoBehaviour:
   - start
   - ratation
   - Ratation
+  - chamgement2
+  - chamgement3
+  - startpersonage
+  - bateau_mise_emplace_IA
+  - startIA
+  - Defaite
+  - Victory
+  - rechargement
+  - start2
+  - start3
+  - start2IA
+  - start3IA
+  - bateau_mise_emplace2
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

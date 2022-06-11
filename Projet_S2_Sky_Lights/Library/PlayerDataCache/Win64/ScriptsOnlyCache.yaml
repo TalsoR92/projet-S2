@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - ProximityVoiceTrigger
     - SettingsMenu
     - cannon
+    - cannon2
     - roue
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -32,6 +33,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -134,9 +137,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3192}
     - Class: 114
+      Script: {instanceID: 3318}
+    - Class: 114
       Script: {instanceID: 3358}
     - Class: 114
       Script: {instanceID: 3676}
+    - Class: 114
+      Script: {instanceID: 3778}
     - Class: 114
       Script: {instanceID: 3894}
     - Class: 114
@@ -1010,7 +1017,7 @@ ScriptsOnlyBuild:
     className: WebRtcAudioDsp
   - hash:
       serializedVersion: 2
-      Hash: 725c4e186dd0fdfadb76446e03736367
+      Hash: 5bf526f29fab81aae55ebc9c8ea55f62
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cannon
@@ -1202,7 +1209,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: a59a768019069323b6fedda8a176194c
+      Hash: 5bf526f29fab81aae55ebc9c8ea55f62
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cannon2
@@ -1214,7 +1221,7 @@ ScriptsOnlyBuild:
     className: IsConnectedAndReadyProperty
   - hash:
       serializedVersion: 2
-      Hash: 72037d35292ea7ceb2b73a4ca31e7305
+      Hash: 7d27794426d67660590f479bb2bab23b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Batteaux
@@ -1394,7 +1401,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: ceb1fe9c1ea6634afc19ab4cdd0b0244
+      Hash: d1d11435a046df378ecb764cddce35c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Batteaux_IA
@@ -2087,4 +2094,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/menu test V1.unity
   - Assets/Scenes/launcherScene.unity
   - Assets/Scenes/Map0.unity
-  playerPath: C:/Users/timot/Desktop/build/Projet_S2_Sky_Lights.exe
+  playerPath: C:/Users/timot/Desktop/build3/Projet_S2_Sky_Lights.exe

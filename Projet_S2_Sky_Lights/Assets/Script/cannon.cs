@@ -9,14 +9,15 @@ public class cannon : MonoBehaviourPunCallbacks
 
 
     public GameObject boulet;
-    public GameObject embouchure;
 
     public Transform bouletorigine;
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
+    private PhotonView view;
     // Start is called before the first frame update
     void Start()
     {
+        view = GetComponent<PhotonView>();
         timerIsRunning = true;
     }
 
@@ -65,16 +66,26 @@ public class cannon : MonoBehaviourPunCallbacks
 
 
     private GameObject b;
-
+    
+    
+    [PunRPC]
+    void chamgement2()
+    {
+        timerIsRunning = false;
+        timeRemaining = 10;
+    }
+    
+    
     public void tire()
     {
         b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
         //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
-        b.GetComponent<Rigidbody>().AddForce(gameObject.transform.right * 100000);
+        b.GetComponent<Rigidbody>().AddForce(gameObject.transform.right * 300000);
         Debug.LogError("tire efectuer");
         //Thread.Sleep(5000);
         timerIsRunning = false;
         timeRemaining = 10;
+        view.RPC("chamgement2",RpcTarget.Others);
         
     }
     

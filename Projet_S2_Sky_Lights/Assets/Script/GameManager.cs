@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     private GameObject personage;
     private GameObject batteaux;
     private PhotonView view;
+
+    
     //public Text vie;
     void Start()
     {
@@ -39,9 +41,22 @@ public class GameManager : MonoBehaviourPunCallbacks
         personage.transform.parent = pere.transform;
         //vie.text = "20 / 20";
         view = GetComponent<PhotonView>();
+        
+        view.RPC("startpersonage",RpcTarget.OthersBuffered,personage);
+        foreach (Player p in PhotonNetwork.PlayerList)
+        {
+            Debug.LogError(p.UserId);
+        }
+        
     }
 
-    
+    [PunRPC]
+    void startpersonage(GameObject p)
+    {
+        
+        p.transform.parent = pere.transform;
+        
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -49,7 +64,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             QuitApplication();
         }
         //Debug.LogError(transform.position.y);
-        if (personage.transform.position.y < 300)
+        if (personage.transform.position.y < -65)
         {
             Debug.LogError("teleportation");
             this.personage.transform.position = spaunw.transform.position;
@@ -57,18 +72,30 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         if (Input.GetKey(KeyCode.D) )
         {
-            pere.transform.Rotate(new Vector3(0,-2,0)* Time.deltaTime);
+            pere.transform.Rotate(new Vector3(0,-4,0)* Time.deltaTime);
             
             //view.RPC("Ratation",RpcTarget.All,-2* Time.deltaTime);
-            view.RPC("start",RpcTarget.Others);
+            //view.RPC("start",RpcTarget.Others);
+            view.RPC("bateau_mise_emplace2",RpcTarget.Others,(pere.transform.position,pere.transform.rotation.y));
         }
         if (Input.GetKey(KeyCode.F) )
         {
-            pere.transform.Rotate(new Vector3(0,2,0)* Time.deltaTime);
-            view.RPC("Ratation",RpcTarget.All,2* Time.deltaTime);
-            view.RPC("start",RpcTarget.Others);
+            pere.transform.Rotate(new Vector3(0,4,0)* Time.deltaTime);
+            //view.RPC("Ratation",RpcTarget.All,2* Time.deltaTime);
+            //view.RPC("start",RpcTarget.Others);
+            view.RPC("bateau_mise_emplace2",RpcTarget.Others,(pere.transform.position,pere.transform.rotation.y));
         }
     }
+    
+    
+    [PunRPC]
+    void bateau_mise_emplace2(Vector3 vector3,int angle)
+    {
+        pere.transform.position = vector3;
+        pere.transform.eulerAngles = new Vector3(0, angle, 0);
+    }
+    
+    [PunRPC]
     void Ratation(int n)
     {
         pere.transform.Rotate(new Vector3(0,n,0)* Time.deltaTime);

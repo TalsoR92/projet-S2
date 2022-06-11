@@ -25,10 +25,11 @@ public class Boulet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "batteaux")
+        if (collision.gameObject.tag == "bateau_IA") 
         {
             Destroy(this.gameObject);
         }
+        
     }
     
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - contact
   - batteaux
+  - bateau_IA
+  - contact2
   layers:
   - Default
   - TransparentFX

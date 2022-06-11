@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 3563362995173286888}
   - component: {fileID: -6719431286019405858}
   - component: {fileID: 2870677126398111643}
-  - component: {fileID: 1220725536784159437}
+  - component: {fileID: 1927036650816261006}
   m_Layer: 0
   m_Name: Sphere 1
-  m_TagString: Untagged
+  m_TagString: contact2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &1220725536784159437
+--- !u!114 &1927036650816261006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,6 +181,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6067011829643168949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ed376ea716c8d44ad05654bf77031d, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ac5daef97a20044b310b2aa969bae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
