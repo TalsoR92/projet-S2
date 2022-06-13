@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
@@ -22,6 +23,10 @@ public class Batteaux_IA : MonoBehaviour
     public Text vie;
     public bool V = false;
     public float timeRemaining2 = 5;
+
+    public List<int> L = new List<int>();
+
+    int c = 0;
     void Start()
     {
           
@@ -31,8 +36,11 @@ public class Batteaux_IA : MonoBehaviour
         //cannon2 = this.transform.Find("cannon3").gameObject;
         view.RPC("start2IA",RpcTarget.Others);
         vie.text = vieint + " / 10";
-            
-            
+        L.Add(5);
+        L.Add(8);
+        L.Add(3);
+        L.Add(9);
+        L.Add(6);
         
     }
     
@@ -96,7 +104,10 @@ public class Batteaux_IA : MonoBehaviour
     }
     
     // Update is called once per frame
+    // public class Random;
     
+    
+
     void Update()
     {
         
@@ -140,7 +151,10 @@ public class Batteaux_IA : MonoBehaviour
                 view.RPC("rechargement",RpcTarget.Others);
                 // tire1();
                 test = false;
-                timeRemaining = 5;
+                // var rnd = new Random();
+                // int month = rnd.Next(1, 10);
+                timeRemaining = L[c];
+                c = (c + 1) % 5;
             }
 
             if (vieint <= 0)
