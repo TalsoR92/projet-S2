@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         if (Input.GetKey(KeyCode.D) )
         {
-            pere.transform.Rotate(new Vector3(0,-4,0)* Time.deltaTime);
+            pere.transform.Rotate(new Vector3(0,-8,0)* Time.deltaTime);
             
             //view.RPC("Ratation",RpcTarget.All,-2* Time.deltaTime);
             //view.RPC("start",RpcTarget.Others);
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         if (Input.GetKey(KeyCode.F) )
         {
-            pere.transform.Rotate(new Vector3(0,4,0)* Time.deltaTime);
+            pere.transform.Rotate(new Vector3(0,8,0)* Time.deltaTime);
             //view.RPC("Ratation",RpcTarget.All,2* Time.deltaTime);
             //view.RPC("start",RpcTarget.Others);
             view.RPC("bateau_mise_emplace2",RpcTarget.Others,(pere.transform.position,pere.transform.rotation.y));

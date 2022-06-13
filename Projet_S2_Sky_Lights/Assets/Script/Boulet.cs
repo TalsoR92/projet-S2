@@ -18,7 +18,7 @@ public class Boulet : MonoBehaviour
         {
             
             Destroy(this.gameObject);
-            Debug.LogError("detruie");
+            //Debug.LogError("detruie");
         }
     }
 

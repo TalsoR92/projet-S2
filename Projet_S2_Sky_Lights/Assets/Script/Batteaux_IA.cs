@@ -132,13 +132,13 @@ public class Batteaux_IA : MonoBehaviour
 
             
             // forward => sur la droite du bateau
-            Debug.Log("rip 1");
+            //Debug.Log("rip 1");
 
             if (test && !Physics.Raycast(touchBoat,150000000))
             {
                 tourner(new Vector3(0,9,0));
             
-                Debug.Log("rip 2");
+                //Debug.Log("rip 2");
             
             
                 // timeRemaining = 10;
@@ -193,7 +193,7 @@ public class Batteaux_IA : MonoBehaviour
         
         b = PhotonNetwork.Instantiate(this.boulet.name, this.transform.position + Vector3.up * 120, Quaternion.identity, 0);
         b.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * 300000 +gameObject.transform.right * 10000 );
-        Debug.LogError("tire efectuer IA");
+        //Debug.LogError("tire efectuer IA");
     }
     
     /*

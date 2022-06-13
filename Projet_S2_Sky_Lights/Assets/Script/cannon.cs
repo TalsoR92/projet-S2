@@ -60,7 +60,7 @@ public class cannon : MonoBehaviourPunCallbacks
         //{
         //    tire();
         //}
-        print(collision.gameObject.name);
+        //print(collision.gameObject.name);
     }
     
 
@@ -81,7 +81,7 @@ public class cannon : MonoBehaviourPunCallbacks
         b = PhotonNetwork.Instantiate(this.boulet.name, bouletorigine.position, Quaternion.identity, 0);
         //b.GetComponent<Rigidbody>().AddForce(bouletorigine.forward * 1000);
         b.GetComponent<Rigidbody>().AddForce(gameObject.transform.right * 300000);
-        Debug.LogError("tire efectuer");
+        //Debug.LogError("tire efectuer");
         //Thread.Sleep(5000);
         timerIsRunning = false;
         timeRemaining = 10;

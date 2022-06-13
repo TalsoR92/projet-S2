@@ -74,7 +74,7 @@ public class Personnage : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
+            //Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
         }
         
         //this.transform.parent = pere.transform;
@@ -121,7 +121,7 @@ public class Personnage : MonoBehaviourPunCallbacks
             if (hit.transform.name == "cannon2")
             {
                 //hit.transform.SetActive(false);
-                Debug.LogError("depuit cannon2");
+                //Debug.LogError("depuit cannon2");
             }
             GameObject coli2 = PhotonNetwork.Instantiate(this.coli.name, hit.point, Quaternion.identity, 0);
             //coli2.transform.parent = pere.transform;
@@ -174,9 +174,9 @@ public class Personnage : MonoBehaviourPunCallbacks
         
         if (photonView.IsMine)
         {
-            Debug.DrawRay(transform.position + Vector3.up *5,Vector3.down*50, Color.green);
+            //Debug.DrawRay(transform.position + Vector3.up *5,Vector3.down*50, Color.green);
             //Debug.DrawRay(transform.position + Vector3.up *55,Vector3.forward*75, Color.red);
-            Debug.DrawRay(transform.position + Vector3.up *45,transform.TransformDirection(Vector3.forward)*75, Color.red);
+            //Debug.DrawRay(transform.position + Vector3.up *45,transform.TransformDirection(Vector3.forward)*75, Color.red);
             ProcessInput();
         }
 
@@ -262,11 +262,11 @@ public class Personnage : MonoBehaviourPunCallbacks
         {
             if (conctactcannon())
             {
-                Debug.LogError("tire cannon");
+                //Debug.LogError("tire cannon");
             }
             else
             {
-                Debug.LogError("ne tire pas");
+                //Debug.LogError("ne tire pas");
             }
         }
         // Rotation avec souris
